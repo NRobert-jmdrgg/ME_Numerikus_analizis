@@ -1,3 +1,3 @@
 function y = f_2(x)
-    y = sinh(x);
-endfunction
+    y = sinh(2*x);
+end
