@@ -2,19 +2,19 @@ function y = differencia_hanyadosok2(x, h, a, b)
     if length(x) < 1
         printf("Rossz x értékek");
         return;
-    endif
+    end
 
     x = sort(x);
 
     if h < 0
         printf("Rossz h érték\n");
         return;
-    endif 
+    end 
 
     if not(all(x >= a && x <= b))
         printf("Nem jó\n");
         return;
-    endif
+    end
 
     j = 1;
 
@@ -23,8 +23,8 @@ function y = differencia_hanyadosok2(x, h, a, b)
             y(j) = ( f(i + h) - f(i - h) ) / ( 2 * h );
         else 
             y(j) = nan;
-        endif
-        j++;
-    endfor    
-endfunction
+        end
+        j = j + 1;
+    end
+end
 

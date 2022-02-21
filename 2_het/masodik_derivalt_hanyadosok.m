@@ -2,19 +2,19 @@ function y = masodik_derivalt_hanyadosok(x, h, a, b)
     if length(x) < 1
         printf("Rossz x értékek");
         return;
-    endif
+    end
 
     x = sort(x);
 
     if h < 0
         printf("Rossz h érték\n");
         return;
-    endif 
+    end 
 
     if not(all(x >= a && x <= b))
         printf("Nem jó\n");
         return;
-    endif
+    end
 
     j = 1;
 
@@ -23,8 +23,8 @@ function y = masodik_derivalt_hanyadosok(x, h, a, b)
             y(j) = ( f(i) - 2 * f(i + h) + f(i + (2 * h)) ) / ( h ^ 2 ); 
         else 
             y(j) = nan;
-        endif
-        j++;
-    endfor    
-endfunction
+        end
+        j = j + 1;
+    end   
+end
 
